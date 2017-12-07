@@ -58,7 +58,7 @@ export class LinksService {
   }
 
   private request(url) {
-    let self: DataService = this,
+    let self: LinksService = this,
       req: any = new XMLHttpRequest(),
       data: any;
     req.open('GET', url);

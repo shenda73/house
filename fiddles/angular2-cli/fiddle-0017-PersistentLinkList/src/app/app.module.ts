@@ -7,6 +7,7 @@ import { ComponentsModule } from './components/components.module';
 import { LinksService } from './services/links.service';
 import { LocalStorageService } from './services/local-storage.service';
 import { StateService } from './services/state.service';
+import { AppStateService } from './app-state.service';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { StateService } from './services/state.service';
     BrowserModule,
     ComponentsModule
   ],
-  providers: [LinksService, LocalStorageService, StateService],
+  providers: [LinksService, LocalStorageService, StateService, AppStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

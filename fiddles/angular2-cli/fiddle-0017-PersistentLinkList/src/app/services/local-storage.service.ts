@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LocalStorage } from 'local-storage';
+import { LocalStorage } from '../interfaces/local-storage';
 
 @Injectable()
 export class LocalStorageService implements LocalStorage {

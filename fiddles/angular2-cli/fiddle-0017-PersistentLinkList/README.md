@@ -1,4 +1,4 @@
-fiddle-0016-PersistentLinkList
+fiddle-0017-PersistentLinkList
 ======
 
 
@@ -36,8 +36,7 @@ Dependency-wise (aka npm lib integration), the app should utilize:
  * jquery (v3.2.1)
  * ngx-bootstrap (v1.9.3)
 
-The app should be seeded using angular-cli.
-
+The app should be seeded using angular-cli (v1.6.0).
 
 
 ### Published Version Link
@@ -47,4 +46,4 @@ N/A
 
 ### Tags
 
-node, angular2, systemjs, es6-shim, reflect-metadata, rxjs, zone.js, concurrently, lite-server, typings
+node, angular2, bootstrap, jquery, ngx-bootstrap

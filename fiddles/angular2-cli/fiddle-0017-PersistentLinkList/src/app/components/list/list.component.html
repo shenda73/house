@@ -1,0 +1,7 @@
+<div class="list-component" *ngIf="!isLoading">
+  <input type="button" *ngFor="let link of links"
+         [id]="link.id"
+         [value]="link.value"
+         [class]="btn"
+         (click)="onLinkClick(link)" >
+</div>

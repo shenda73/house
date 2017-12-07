@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Observer} from 'rxjs/Observer';
 import 'rxjs/add/operator/share';
-import {LocalStorageService} from 'local-storage.service';
-import {State} from 'state';
+import {LocalStorageService} from './local-storage.service';
+import {State} from './../interfaces/state';
+import {Base} from './../base';
 
 
 @Injectable()
-export class StateService implements State {
+export class StateService extends Base implements State {
 
   stateEventChange$: Observable<string>;
 
@@ -16,7 +16,7 @@ export class StateService implements State {
   private _stateEventObserver: Observer<string>;
 
   constructor(public databaseService: LocalStorageService) {
-
+    super();
     this._stateEvent = 'init';
 
     this.stateEventChange$ = new Observable<string>(
@@ -36,6 +36,10 @@ export class StateService implements State {
         this._stateEventObserver.next(value);
       }
     }
+  }
+
+  zero() {
+    this.databaseService.zero();
   }
 
 }
