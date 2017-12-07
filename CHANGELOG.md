@@ -1680,3 +1680,4 @@ Alternately, the _Daily Diary of my Programming Dreams_.
 * **Angular2 CLI**
 
   1.  Added [fiddles/angular2-cli/fiddle-0014-FacebookAuthO](fiddles/angular2-cli/fiddle-0014-FacebookAuthO) ~ [Issue #204](https://github.com/bradyhouse/house/issues/204)
+  2.  Added [fiddles/angular2-cli/fiddle-0016-PersistentLinkList](fiddles/angular2-cli/fiddle-0016-PersistentLinkList) ~ [Issue 207](https://github.com/bradyhouse/house/issues/207)
