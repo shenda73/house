@@ -1,6 +1,36 @@
 .list-component {
-    padding-top: calc(2vh);
-    padding-bottom: calc(2vh);
-    padding-left: calc(2vw);
-    padding-right: calc(2vw);
+   margin-right: calc(10%);
+
+}
+
+
+.list-component a {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+    border-color: white;
+    border-width: 1px;
+
+}
+
+
+.list-component a:focus{
+    outline: none;
+}
+
+.list-component img {
+    padding-top: 10px;
+    width: calc(80%);
+    height: calc(80%);
+
+}
+
+.list-component .btn {
+
+    width: calc(10vw);
+    height: calc(12vh);
+    background-color: black;
+    min-width: 50px;
+    min-height: 50px;
 }

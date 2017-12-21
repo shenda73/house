@@ -7,6 +7,10 @@ import { ListEditorComponent } from './list-editor/list-editor.component';
   imports: [
     CommonModule
   ],
-  declarations: [ListComponent, ListEditorComponent]
+  declarations: [ListComponent, ListEditorComponent],
+  exports: [
+    ListComponent,
+    ListEditorComponent
+  ]
 })
 export class ComponentsModule { }

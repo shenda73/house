@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Base } from './base';
-import { LinksService } from './services/index';
+import { ListOptions } from './interfaces/index';
+import { LinksService} from './services/index';
 import {AppStateService} from './app-state.service';
 
 @Component({
@@ -10,7 +11,7 @@ import {AppStateService} from './app-state.service';
 })
 export class AppComponent extends Base {
   title = 'app';
-  links: string;
+  listOptions: ListOptions;
 
   constructor(linksService: LinksService,
               appStateService: AppStateService) {
@@ -18,11 +19,13 @@ export class AppComponent extends Base {
     this.subscriptions.push(linksService.responseChange$.subscribe(
       (data: any) => this.onLinkServiceResponseChange(data)
     ));
-    this.links = 'loading ...';
+
   }
 
   onLinkServiceResponseChange(data: any) {
-    this.links = JSON.stringify(data);
+    this.listOptions = {
+      links: data.data.data
+    }
   }
 
 

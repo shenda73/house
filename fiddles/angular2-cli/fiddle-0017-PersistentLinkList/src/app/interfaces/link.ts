@@ -1,8 +1,12 @@
+
 export interface Link {
   id: number;
-  orderId: number;
-  url: string,
+  sortId: number;
+  helpUrl: string;
+  helpIcon: string,
+  helpTitle: string,
+  title: string,
   icon: string,
-  title?: string,
-  help?: Link;
+  url: string,
+  text: string
 }

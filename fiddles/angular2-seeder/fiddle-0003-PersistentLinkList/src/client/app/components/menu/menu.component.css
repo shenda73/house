@@ -1,0 +1,76 @@
+.menu-component {
+    background: black;
+}
+
+:host {
+    overflow-y: scroll;
+    background: black;
+    color: #fff;
+    position: fixed;
+    left: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    min-width: 250px;
+    z-index: 9999;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.menu-component ul {
+    padding-top: 0px;
+    font-size: 16px;
+    line-height: 3;
+    font-weight: 400;
+    list-style: none;
+}
+
+.menu-component .navbar .navbar-expand-lg .navbar-dark .bg-dark {
+    background-color: black;
+    padding-bottom: 0px;
+    padding-right: 10px;
+}
+
+.menu-component img {
+    margin-top: 10px;
+    height: 20px;
+    float: right;
+}
+
+.menu-component input {
+    cursor: pointer;
+}
+
+.menu-component .right {
+    position: fixed;
+    float: right;
+}
+
+
+.menu-component .list-group-item:hover {
+    background-color: black;
+}
+
+.menu-component .search-field-wrapper {
+    padding-right: 20px;
+}
+
+.menu-component .form-control {
+    width: 130px;
+    max-width: 130px;
+    min-width: 130px;
+}
+
+:host .btn-box {
+    padding-left: 20px;
+    position: absolute;
+}
+
+:host .btn-box {
+    top: 24px;
+    right: 15px;
+}
+
+.btn-box {
+    cursor: pointer;
+}

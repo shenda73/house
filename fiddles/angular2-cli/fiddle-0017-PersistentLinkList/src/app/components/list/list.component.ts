@@ -18,7 +18,7 @@ import { Link, ListOptions, ListEvent } from './../../interfaces/index';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnChanges, AfterViewInit, DoCheck {
+export class ListComponent implements OnChanges, DoCheck {
 
   @Output() events: EventEmitter<ListEvent>;
   @Input() options: ListOptions;
@@ -38,7 +38,7 @@ export class ListComponent implements OnChanges, AfterViewInit, DoCheck {
     if ('options' in changes) {
       const value = changes['options'].currentValue;
       if (!this._differ && value) {
-        this._differ = this._differs.find(value).create(this._changeDetector);
+        this._differ = this._differs.find(value).create();
       }
     }
   }
@@ -65,6 +65,20 @@ export class ListComponent implements OnChanges, AfterViewInit, DoCheck {
         }
 
     }
+  }
+
+  onLinkClick(link: Link) {
+    this._openExternalLink(link);
+  }
+
+  private _openExternalLink(link: Link) {
+    let aTag: any = document.createElement('a');
+    aTag.href = link.url;
+    aTag.target = "_blank";
+    document.body.appendChild(aTag);
+    aTag.click();
+    document.body.removeChild(aTag);
+    aTag = null;
   }
 
 

@@ -53,7 +53,7 @@ export class LinksService {
       (observer: any) => this._errorObserver = observer
     ).share();
 
-    this.request('assets/json/links.json');
+    this.request('links.json');
 
   }
 

@@ -1,13 +1,15 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "persistent-link-list"
+    "name": "persistent-link-list",
+    "ejected": true
   },
   "apps": [
     {
       "root": "src",
       "outDir": "dist",
       "assets": [
+        "links.json",
         "assets",
         "favicon.ico"
       ],
@@ -59,6 +61,7 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+    }
   }
 }
