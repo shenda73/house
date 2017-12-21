@@ -1680,3 +1680,10 @@ Alternately, the _Daily Diary of my Programming Dreams_.
 * **Angular2 CLI**
 
   1.  Added [fiddles/angular2-cli/fiddle-0014-FacebookAuthO](fiddles/angular2-cli/fiddle-0014-FacebookAuthO) ~ [Issue #204](https://github.com/bradyhouse/house/issues/204)
+
+* **Angular2 Seeder**
+
+  1.  Added [fiddles/angular2-seeder/fiddle-0004-AnimatedSearchField](fiddles/angular2-seeder/fiddle-0004-AnimatedSearchField)
+  
+  
+
