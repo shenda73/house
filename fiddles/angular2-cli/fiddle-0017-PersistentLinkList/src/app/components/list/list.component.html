@@ -1,0 +1,9 @@
+<div class="list-component">
+  <a *ngFor="let link of links"
+       [id]="link.id"
+       [title]="link.title"
+       class="btn btn-default"
+       (click)="onLinkClick(link)" >
+      <img [src]="link.icon" >
+    </a>
+  </div>

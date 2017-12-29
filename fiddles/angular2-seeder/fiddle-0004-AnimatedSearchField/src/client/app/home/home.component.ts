@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NameListService } from '../shared/name-list/name-list.service';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
+
 
 /**
  * This class represents the lazy loaded HomeComponent.
@@ -22,7 +24,10 @@ export class HomeComponent implements OnInit {
    *
    * @param {NameListService} nameListService - The injected NameListService.
    */
-  constructor(public nameListService: NameListService) {}
+  constructor(public nameListService: NameListService,
+              private sanitizer: DomSanitizer) {
+
+  }
 
   /**
    * Get the names OnInit
@@ -30,6 +35,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getNames();
   }
+
+  trustSrcUrl = function(data: any) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(data);
+  };
 
   /**
    * Handle the nameListService observable

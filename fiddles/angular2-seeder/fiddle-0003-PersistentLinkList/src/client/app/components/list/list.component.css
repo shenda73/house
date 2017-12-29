@@ -1,0 +1,58 @@
+.list-component {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+
+.list-component .btn-box {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+    border-color: white;
+    border-width: 1px;
+
+}
+
+
+.list-component a:focus{
+
+}
+
+.list-component img {
+    padding-top: 10px;
+    width: calc(80%);
+    height: calc(80%);
+    cursor: pointer;
+}
+
+.list-component .btn {
+    width: 61px;
+    height: 54px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.list-component .btn:hover {
+    background-color: #1e70b3;
+}
+
+.list-component a {
+    cursor: pointer;
+}
+
+.list-component .btn-link-img {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+.help-btn {
+    position: fixed;
+    top: -10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2;
+}

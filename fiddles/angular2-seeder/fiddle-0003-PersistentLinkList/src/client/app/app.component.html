@@ -1,0 +1,10 @@
+
+<div class="card text-white bg-primary mb-3" (click)="onClickAnywhere($event)">
+    <div class="card-body">
+        <app-list [options]="listOptions" (events)="onListEvents($event)"></app-list>
+        <app-menu [@slideInOut]="menuState" [options]="menuOptions" (events)="onMenuEvents($event)"></app-menu>
+    </div>
+</div>
+
+
+

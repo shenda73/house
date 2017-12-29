@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="http://github/bradyhouse/house/fiddles/jquery/fiddle-0058-VariableName">
+    <meta name="author" content="bradyhouse@gmail.com">
+    <link rel="shortcut icon" href="../../resources/images/favicon.ico" id="favicon"/>
+    <title>fiddle-0058-VariableName</title>
+</head>
+<body style="background-color: black;">
+<div id="fiddleHook">
+    <button name="button" onclick="window.app.onStretchClick(this)">Stretch</button>
+    <button name="button" onclick="window.app.onShrinkClick(this)">Shrink</button>
+</div>
+<script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
+<script>
+    (function (app, $, undefined) {
+        "use strict";
+
+        app.onStretchClick = function() {
+            var iframe = window.parent.document.getElementsByTagName('iframe')[0];
+            if (iframe) {
+                iframe.width = '100%';
+                iframe.height = '500px';
+            }
+        };
+
+        app.onShrinkClick = function() {
+            var iframe = window.parent.document.getElementsByTagName('iframe')[0];
+            if (iframe) {
+                iframe.width = '200px';
+                iframe.height = '200px';
+            }
+        };
+
+
+    })(window.app = window.app || {}, jQuery)
+
+</script>
+</body>
+</html>
